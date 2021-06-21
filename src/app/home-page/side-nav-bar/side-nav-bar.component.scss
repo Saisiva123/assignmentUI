@@ -1,0 +1,73 @@
+$menuColor: lightgrey;
+
+.sideNavBar {
+  width: 300px;
+  height: 100vh;
+  background: var(--navbar-bg-color);
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  overflow: auto;
+
+  .userProfile {
+    position: relative;
+    margin-top: 10vh;
+    #img {
+      background-image: url("../../../assets/images/user.jpeg");
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background-size: 100%;
+      box-shadow: -2px 1px 14px lightgrey;
+    }
+    #img + p {
+      font-size: 16px;
+      margin: 27px 0px 0px 0px;
+      color: #f9f3f3;
+    }
+
+    p:last-child {
+      font-size: 12px;
+      color: lightgrey;
+    }
+  }
+
+  .menus {
+    margin-top: 100px;
+    text-align: center;
+    cursor: pointer;
+
+    div {
+      width: 100%;
+      clear: both;
+      margin-bottom: 14px;
+      display: table;
+      padding: 15px 0px 3px 0px;
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        color: white;
+        .mat-icon,
+        p {
+          color: white;
+        }
+      }
+      .mat-icon {
+        width: 30%;
+        float: left;
+        font-size: 20px;
+        color: $menuColor;
+        text-align: right;
+      }
+      p {
+        width: 64%;
+        text-align: left;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+        color: $menuColor;
+        float: right;
+      }
+    }
+  }
+}

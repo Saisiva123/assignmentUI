@@ -1,0 +1,17 @@
+.homePage
+{
+    height: 100vh;
+    background: #e7eef7;
+    div:first-child
+    {
+       width: 300px;
+       height: 100vh;
+       float: left;
+    }
+    div:last-child
+    {
+        width : calc(100vw - 300px);
+        height: 100vh;
+        float: right;
+    }
+}

@@ -1,0 +1,138 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "domain": "willaims.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "availableDomains": 10,
+      "usedDomains": 4,
+      "status": "active",
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 100,
+      "subdomain": [
+        {
+          "id": 11,
+          "name": "abc.xyz.com",
+          "usedStorage": "10gb",
+          "domainTag": "Staging",
+          "montlyVisitor": 700,
+          "status": "Inactive"
+        },
+        {
+          "id": 12,
+          "name": "adef.xyz.com",
+          "usedStorage": "40gb",
+          "domainTag": "Add On",
+          "montlyVisitor": 1100,
+          "status": "Inactive"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "domain": "darkerGuns.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 2000
+    },
+    {
+      "id": 3,
+      "domain": "Phillipines new.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 2000
+    },
+    {
+      "id": 4,
+      "domain": "xyz.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 2000
+    },
+    {
+      "id": 2,
+      "domain": "darkerGuns.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 2000
+    },
+    {
+      "domain": "one new domain.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 2000,
+      "id": 5
+    },
+    {
+      "domain": "testing domain",
+      "storage": "100gb",
+      "usedStorage": "90gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "active",
+      "availableDomains": 10,
+      "usedDomains": 5,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 3000,
+      "id": 6
+    },
+    {
+      "domain": "hiiwilliams",
+      "storage": "100gb",
+      "usedStorage": "23gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "active",
+      "availableDomains": 10,
+      "usedDomains": 3,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 1,
+      "id": 7
+    },
+    {
+      "domain": "kittu ",
+      "storage": "100gb",
+      "usedStorage": "100gb",
+      "domainTag": "Primary",
+      "subdomain": [],
+      "status": "active",
+      "availableDomains": 10,
+      "usedDomains": 8,
+      "monthlyVisitorCapacity": 10000,
+      "montlyVisitor": 2500,
+      "id": 8
+    }
+  ]
+}

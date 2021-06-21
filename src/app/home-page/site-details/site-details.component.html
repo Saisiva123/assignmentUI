@@ -1,0 +1,110 @@
+<div class="siteDetails">
+    <div class="header">
+        <p>Site Details</p>
+        <button mat-raised-button (click)="addNewSiteDetails()">+ Add New Site</button>
+    </div>
+    <div class="searchOptions">
+        <p>Show</p>
+        <input type="number" value="1" min="1" max="100" #entries (input)="loadSiteDetails(entries.value)">
+        <p>Entries</p>
+        <div class="searchbar" matTooltip="Search" [ngClass]="{'setBg': this.toggleSearch  === 'opened'}">
+            <mat-icon (click)="this.toggleSearch = 'opened'">search</mat-icon>
+            <input class="search-control" type="text" placeholder="Search for content" [@inputElement]="toggleSearch"
+                [(ngModel)]="searchText" #searchbar (keyup)="search(searchText)"><!-- .enter -->
+            <mat-icon *ngIf="toggleSearch ==='opened'" (click)="closeSearchBar()">close</mat-icon>
+        </div>
+    </div>
+    <div class="details">
+        <div class="tableHeading">
+            <p>Domain & Plan Name</p>
+            <p>Storage</p>
+            <p>Monthly Visitor</p>
+            <p>Domains</p>
+            <p>Status</p>
+        </div>
+        <mat-accordion>
+
+            <mat-expansion-panel [expanded]="i<1 && true" *ngFor="let element of siteDetails;let i = index">
+                <mat-expansion-panel-header>
+                    <div class="section">
+                        <p>{{element.domain}}</p>
+                        <mat-icon id="check">check_circle</mat-icon>
+                        <p>Proffessional plan</p>
+                    </div>
+                    <div class="section">
+                        <div class="parentBar">
+                            <div class="progressBar">
+                                <div class="child"
+                                    [style.width.%]="getStorageUsed(element.usedStorage,element.storage)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{element.usedStorage}} of {{element.storage}}</p>
+                    </div>
+                    <div class="section">
+                        <div class="parentBar">
+                            <div class="progressBar">
+                                <div class="child"
+                                    [style.width.%]="getVisitors(element.montlyVisitor,element.monthlyVisitorCapacity)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{element.montlyVisitor}} of {{element.monthlyVisitorCapacity}}</p>
+                    </div>
+                    <div class="section">
+                        <div class="progressCircle">
+                            <mat-progress-spinner class="example-margin" [diameter]="55" [color]="progressColor"
+                                [mode]="progressMode"
+                                [value]="getProgressValue(element.usedDomains,element.availableDomains)"
+                                [strokeWidth]="2">
+                            </mat-progress-spinner>
+                            <p>{{element.usedDomains}}/{{element.availableDomains}}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="section">
+                        <p class="status" [ngClass]="element.status === 'active' ? 'active' : 'inactive' ">
+                            {{element.status}}</p>
+                    </div>
+                </mat-expansion-panel-header>
+                <div *ngFor="let subElem of element.subdomain" class="subdomain">
+                    <div class="section">
+                        <p>{{subElem.name}}</p>
+                        <mat-icon id="check">check_circle</mat-icon>
+                        <p>Proffessional plan</p>
+                    </div>
+                    <div class="section">
+                        <div class="parentBar">
+                            <div class="progressBar">
+                                <div class="child"
+                                    [style.width.%]="getStorageUsed(subElem.usedStorage,element.storage)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{subElem.usedStorage}} of {{element.storage}}</p>
+                    </div>
+                    <div class="section">
+                        <div class="parentBar">
+                            <div class="progressBar">
+                                <div class="child"
+                                    [style.width.%]="getVisitors(subElem.montlyVisitor,element.monthlyVisitorCapacity)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{subElem.montlyVisitor}} of {{element.monthlyVisitorCapacity}}</p>
+                    </div>
+                    <div class="section">
+                        <p class="status"
+                            [ngClass]="{'addOn':subElem.domainTag === 'Add On', 'staging': subElem.domainTag === 'Staging'}">
+                            {{subElem.domainTag}}</p>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

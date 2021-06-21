@@ -1,0 +1,27 @@
+.mat-dialog-title {
+  margin-bottom: 35px;
+}
+
+.mat-form-field {
+  margin-left: 16px;
+  margin-bottom: 20px;
+}
+.mat-dialog-actions {
+  justify-content: flex-end;
+  .mat-button:first-child {
+    border: 1px solid grey;
+    color: grey;
+    margin-right: 15px;
+  }
+  .mat-button:last-child {
+    background: #5b73fd;
+    padding: 0px 29px;
+    box-sizing: border-box;
+    color: white;
+  }
+  .disabled
+  {
+    background: rgb(153, 181, 190) !important;
+    cursor: not-allowed;
+  }
+}
